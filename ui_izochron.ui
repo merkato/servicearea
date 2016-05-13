@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>izochronWidget</class>
+ <widget class="QDockWidget" name="izochronWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>235</width>
+    <height>675</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Czasy nominalne</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayoutBase">
+      <property name="spacing">
+       <number>3</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelConnections">
+        <property name="locale">
+         <locale language="English" country="UnitedStates"/>
+        </property>
+        <property name="text">
+         <string>Baza</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelFunction">
+        <property name="locale">
+         <locale language="English" country="UnitedStates"/>
+        </property>
+        <property name="text">
+         <string>Funkcja</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboConnections">
+        <property name="locale">
+         <locale language="English" country="UnitedStates"/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboBoxFunction">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="locale">
+         <locale language="English" country="UnitedStates"/>
+        </property>
+        <property name="currentIndex">
+         <number>-1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxSql">
+      <property name="locale">
+       <locale language="English" country="UnitedStates"/>
+      </property>
+      <property name="title">
+       <string>sql</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>3</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="margin">
+        <number>6</number>
+       </property>
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="spacing">
+          <number>3</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelSchemat">
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="text">
+            <string>schemat</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEditSchemat">
+           <property name="toolTip">
+            <string>name of the database schema</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelTable">
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="text">
+            <string>edge_table</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEditTable">
+           <property name="toolTip">
+            <string>name of the table containing the routable network</string>
+           </property>
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="labelGeometry">
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="text">
+            <string>geometry</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEditGeometry">
+           <property name="toolTip">
+            <string>name of the geometry column in network table</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="scrollAreaColumns">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>195</width>
+            <height>156</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetDefaultConstraint</enum>
+           </property>
+           <property name="margin">
+            <number>6</number>
+           </property>
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayoutColumns">
+             <property name="spacing">
+              <number>3</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QLabel" name="labelId">
+               <property name="locale">
+                <locale language="English" country="UnitedStates"/>
+               </property>
+               <property name="text">
+                <string>id</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEditId">
+               <property name="toolTip">
+                <string>identifier of the edge</string>
+               </property>
+               <property name="locale">
+                <locale language="English" country="UnitedStates"/>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="labelSource">
+               <property name="locale">
+                <locale language="English" country="UnitedStates"/>
+               </property>
+               <property name="text">
+                <string>source</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="lineEditSource">
+               <property name="toolTip">
+                <string>name of the source node column</string>
+               </property>
+               <property name="locale">
+                <locale language="English" country="UnitedStates"/>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="labelTarget">
+               <property name="locale">
+                <locale language="English" country="UnitedStates"/>
+               </property>
+               <property name="text">
+                <string>target</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="lineEditTarget">
+               <property name="toolTip">
+                <string>name of the target node column</string>
+               </property>
+               <property name="locale">
+                <locale language="English" country="UnitedStates"/>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="labelCost">
+               <property name="locale">
+                <locale language="English" country="UnitedStates"/>
+               </property>
+               <property name="text">
+                <string>cost</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QCheckBox" name="pd_brec_checkbox">
+               <property name="toolTip">
+                <string extracomment="Usage of Population Distribution form PD BREC by GUS"/>
+               </property>
+               <property name="locale">
+                <locale language="English" country="UnitedStates"/>
+               </property>
+               <property name="text">
+                <string>GUS PD BREC</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="lineEditCost">
+               <property name="toolTip">
+                <string>edge traversal cost (a negative cost will prevent the edge from being inserted in the graph)</string>
+               </property>
+               <property name="locale">
+                <locale language="English" country="UnitedStates"/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayoutArguments">
+      <property name="spacing">
+       <number>3</number>
+      </property>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelDistance">
+        <property name="locale">
+         <locale language="English" country="UnitedStates"/>
+        </property>
+        <property name="text">
+         <string>distance</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelSourceId">
+        <property name="locale">
+         <locale language="English" country="UnitedStates"/>
+        </property>
+        <property name="text">
+         <string>source_id</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEditSourceId">
+        <property name="toolTip">
+         <string>id of the start node</string>
+        </property>
+        <property name="locale">
+         <locale language="English" country="UnitedStates"/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QToolButton" name="buttonSelectSourceId">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="locale">
+         <locale language="English" country="UnitedStates"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>icons/add.png</normaloff>icons/add.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEditDistance">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="locale">
+         <locale language="English" country="UnitedStates"/>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="3">
+       <layout class="QHBoxLayout" name="horizontalLayoutOption2">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMaximumSize</enum>
+        </property>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayoutCommands">
+      <property name="spacing">
+       <number>3</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="buttonRun">
+        <property name="minimumSize">
+         <size>
+          <width>70</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="locale">
+         <locale language="English" country="UnitedStates"/>
+        </property>
+        <property name="text">
+         <string>Run</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>3</number>
+      </property>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>comboConnections</tabstop>
+  <tabstop>comboBoxFunction</tabstop>
+  <tabstop>lineEditTable</tabstop>
+  <tabstop>lineEditGeometry</tabstop>
+  <tabstop>lineEditSchemat</tabstop>
+  <tabstop>scrollAreaColumns</tabstop>
+  <tabstop>lineEditId</tabstop>
+  <tabstop>lineEditSource</tabstop>
+  <tabstop>lineEditTarget</tabstop>
+  <tabstop>lineEditCost</tabstop>
+  <tabstop>lineEditSourceId</tabstop>
+  <tabstop>buttonSelectSourceId</tabstop>
+  <tabstop>lineEditDistance</tabstop>
+  <tabstop>buttonRun</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

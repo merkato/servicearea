@@ -1,0 +1,15 @@
+[general]
+name=Service Area
+description=Service area calculations with pgRouting
+version=0.6
+qgisMinimumVersion=2.8
+author=Tomasz Nycz, Michał Mackiewicz
+email=tomasz.nycz@gis-support.pl
+changelog=0.6 added service areas with concavehull
+tags=pgRouting,PostGIS,routing,network analysis,isochrone
+icon=icons/icon.png
+experimental=True
+homepage=http://nycz.beskidy.pl
+tracker=https://bitbucket.org/tnycz/izochron-plugin/issue
+repository=http://bitbucket.org/tnycz/izochron-plugin
+category=Database
