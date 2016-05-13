@@ -1,9 +1,11 @@
-# Obsługa izochron
+# Obszary odpowiedzialności
 
-A plugin for QGIS by GIS-Support team.
+Wtyczka/widget QGIS do wykonywania obliczeń obszarów odpowiedzialności (service areas) i czasów nominalnych dojazdu/dojścia.
 
 # Aktualny stan, changelog
 
+0.6 - dodano tworzenie obszarów obsługi, na podstawie ConcaveHull i wartości minimalnych
+0.5 - dodano schemat bazy, dając możliwość pracy z wieloma różnymi sieciami
 0.4a - tworzenie izochrony jako dodatkowego widoku
 0.4 - dodano komunikat o nieznalezieniu węzła source (w zadanym promieniu)
 0.3b - naprawiono błąd w funkcji updateDd powodujący korzystanie wyłącznie ze schemy public
@@ -40,7 +42,7 @@ Następnie wybieramy numer węzła startowego wpisując go ręcznie w polu sourc
 
 * updateDd
 
-Ta funkcja działa bardzo podobnie jak createDd, jedyna różnica taka że nie tworzy tabeli catchment - bez której obliczenia nie dojdą do skutku (konieczne jest wcześniejsze jednorazowe uruchomienie funkcji createDd). 
+Ta funkcja działa bardzo podobnie jak createDd, lecz zamiast tworzenia tabel, aktualizuje istniejące o kolejne punkty. 
 
 * clearDd
 
@@ -48,7 +50,7 @@ Ta funkcja musi mieć prawidłowo wybraną wyłącznie bazę danych, pozostałe 
 
 * isochrones
 
-Tworzenie izochrony czasu dojazdu, jako widok z concavehull. W polu wpisz wartość w minutach.
+Tworzenie izochrony czasu dojazdu, jako widok z concavehull. Na podstawie obliczeń wykonanych przy pomocy updateDd, ta funkcja wyrysowuje izochronę dla każdego z wybranych punktów, przy dwóch stykających się izochronach, próbuje wskazać granicę między nimi
 
 * dodatkowe informacje
 
@@ -58,3 +60,4 @@ Czas podawany w polu cost wtyczki wyrażony jest w godzinach, zaś wyniki dział
 
 Przy opracowaniu wtyczki wykorzystano plugin pgRouting_Layer (https://github.com/anitagraser/pgRoutingLayer) na licencji GNU GPL 2.
 Kod SQL zapytań - (C) Michał Mackiewicz, 2014.
+Za wsparcie okazane przy tworzeniu wtyczki serdecznie dziękuję.
