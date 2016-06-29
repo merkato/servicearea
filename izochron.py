@@ -51,7 +51,7 @@ class izochron:
         'labelSource', 'lineEditSource',
         'labelTarget', 'lineEditTarget',
         'labelCost', 'lineEditCost',
-        'labelDistance', 'lineEditDistance',
+        'labelDistance', 'lineEditDistance', 'labelDelay', 'lineEditDelay',
         'labelSourceId', 'lineEditSourceId', 'buttonSelectSourceId',
         'pd_brec_checkbox',
     ]
@@ -275,6 +275,8 @@ class izochron:
         
         if 'lineEditDistance' in controls:
             args['distance'] = self.dock.lineEditDistance.text()
+        if 'lineEditDelay' in controls:
+            args['delay'] = self.dock.lineEditDelay.text()
         
         if 'pd_brec_checkbox' in controls:
             args['pd_brec_checked'] = self.dock.pd_brec_checkbox.isChecked()
@@ -456,6 +458,7 @@ class izochron:
         
         self.dock.lineEditSourceId.setText(Utils.getStringValue(settings, '/izochron/source_id', ''))
         self.dock.lineEditDistance.setText(Utils.getStringValue(settings, '/izochron/distance', ''))
+        self.dock.lineEditDelay.setText(Utils.getStringValue(settings, '/izochron/delay', ''))
         
     def saveSettings(self):
         settings = QSettings()
@@ -472,6 +475,7 @@ class izochron:
         
         settings.setValue('/izochron/source_id', self.dock.lineEditSourceId.text())
         settings.setValue('/izochron/distance', self.dock.lineEditDistance.text())
+        settings.setValue('/izochron/delay', self.dock.lineEditDelay.text())
         #settings.setValue('/izochron/pd_brec_checked', self.dock.pd_brec_check.isChecked()
     def refresh_layers(self):
 		for layer in qgis.utils.iface.mapCanvas().layers():

@@ -32,7 +32,7 @@ class Function(FunctionBase):
 					CREATE TABLE %(schemat)s.potencjal AS
 					WITH kawalki AS 
 					(SELECT ST_Transform(ST_Collect(geom_way), 2180) as geom,source FROM %(schemat)s.catchment_final GROUP BY source) 
-					SELECT z.source, SUM(l.total_pop), ST_ConcaveHull((z.geom),0.75) AS geometry 
+					SELECT z.source, SUM(l.total_pop), ST_ConcaveHull((z.geom),0.7) AS geometry 
 					FROM public.ludnosc l, kawalki z 
 					WHERE ST_Intersects(l.geom, z.geom) GROUP BY z.source, z.geom;""" % args
 		else:
@@ -40,7 +40,7 @@ class Function(FunctionBase):
 					CREATE TABLE %(schemat)s.potencjal AS
 					WITH kawalki AS 
 					(SELECT ST_Transform(ST_Collect(geom_way), 2180) as geom,source FROM %(schemat)s.catchment_final GROUP BY source) 
-					SELECT z.source, ST_ConcaveHull((z.geom),0.75) AS geometry 
+					SELECT z.source, ST_ConcaveHull((z.geom),0.7) AS geometry 
 					FROM kawalki z GROUP BY z.source, z.geom;""" % args
 
     def __init__(self, ui):

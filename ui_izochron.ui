@@ -317,16 +317,6 @@
       <property name="spacing">
        <number>3</number>
       </property>
-      <item row="1" column="0">
-       <widget class="QLabel" name="labelDistance">
-        <property name="locale">
-         <locale language="English" country="UnitedStates"/>
-        </property>
-        <property name="text">
-         <string>distance</string>
-        </property>
-       </widget>
-      </item>
       <item row="0" column="0">
        <widget class="QLabel" name="labelSourceId">
         <property name="locale">
@@ -376,6 +366,26 @@
         </property>
        </widget>
       </item>
+      <item row="5" column="0" colspan="3">
+       <layout class="QHBoxLayout" name="horizontalLayoutOption2">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMaximumSize</enum>
+        </property>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelDistance">
+        <property name="locale">
+         <locale language="English" country="UnitedStates"/>
+        </property>
+        <property name="text">
+         <string>distance</string>
+        </property>
+       </widget>
+      </item>
       <item row="1" column="1">
        <widget class="QLineEdit" name="lineEditDistance">
         <property name="maximumSize">
@@ -389,15 +399,18 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="0" colspan="3">
-       <layout class="QHBoxLayout" name="horizontalLayoutOption2">
-        <property name="spacing">
-         <number>3</number>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labelDelay">
+        <property name="locale">
+         <locale language="English" country="UnitedStates"/>
         </property>
-        <property name="sizeConstraint">
-         <enum>QLayout::SetMaximumSize</enum>
+        <property name="text">
+         <string>delay</string>
         </property>
-       </layout>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEditDelay"/>
       </item>
      </layout>
     </item>
@@ -409,32 +422,32 @@
       <property name="rightMargin">
        <number>0</number>
       </property>
-      <item>
-       <widget class="QPushButton" name="buttonRun">
-        <property name="minimumSize">
-         <size>
-          <width>70</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="locale">
-         <locale language="English" country="UnitedStates"/>
-        </property>
-        <property name="text">
-         <string>Run</string>
-        </property>
-        <property name="flat">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
      </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="buttonRun">
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="locale">
+       <locale language="English" country="UnitedStates"/>
+      </property>
+      <property name="text">
+       <string>Run</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
@@ -459,8 +472,6 @@
   <tabstop>lineEditCost</tabstop>
   <tabstop>lineEditSourceId</tabstop>
   <tabstop>buttonSelectSourceId</tabstop>
-  <tabstop>lineEditDistance</tabstop>
-  <tabstop>buttonRun</tabstop>
  </tabstops>
  <resources/>
  <connections/>

@@ -1,11 +1,11 @@
 [general]
 name=Service Area
 description=Service area calculations with pgRouting
-version=0.6
+version=0.7
 qgisMinimumVersion=2.8
 author=Tomasz Nycz, Michał Mackiewicz
 email=tomasz.nycz@gis-support.pl
-changelog=0.6 added service areas with concavehull
+changelog=0.7 added service areas delay
 tags=pgRouting,PostGIS,routing,network analysis,isochrone
 icon=icons/icon.png
 experimental=True

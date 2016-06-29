@@ -4,6 +4,7 @@ Wtyczka/widget QGIS do wykonywania obliczeń obszarów odpowiedzialności (servi
 
 # Aktualny stan, changelog
 
+0.7a - dodano delay - zwłokę wyjazdu do zdarzenia
 0.6 - dodano tworzenie obszarów obsługi, na podstawie ConcaveHull i wartości minimalnych
 0.5 - dodano schemat bazy, dając możliwość pracy z wieloma różnymi sieciami
 0.4a - tworzenie izochrony jako dodatkowego widoku
