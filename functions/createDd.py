@@ -41,7 +41,7 @@ class Function(FunctionBase):
     
     def getQuery(self, args):
         return """CREATE TABLE %(schemat)s.catchment AS
-		SELECT id1, %(geometry)s, route.cost + %(delay)s::double precision AS route.cost, row_number() over () AS qgis_id, %(source_id)s AS source
+		SELECT id1, %(geometry)s, route.cost + %(delay)s AS cost, row_number() over () AS qgis_id, %(source_id)s AS source
 			FROM %(schemat)s.%(edge_table)s
 JOIN (SELECT * FROM pgr_drivingDistance('
 SELECT %(id)s AS id,
